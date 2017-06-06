@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<style>
+    .ui-listview>.ui-li-static {
+        white-space: pre-line;
+    }
+</style>
+<div data-role="page">
+    <div data-role="header" data-position="fixed" style="overflow:hidden;">
+        <div data-role="navbar">
+            <ul>
+            <li><a href="feeling.html" class="ui-btn-active"  data-theme="a" data-ajax="false">느낌</a></li>
+            <li><a href="needs.html"  data-theme="a" data-ajax="false">욕구</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+	<div id="cont">
+        <div class="about_nbox_middle">
+            <div class="about_nbox_top1">
+    	        <h3 class="none">욕구가 충족되었을때</h3>
+                <a href="feeling_positive_auto.html" class="ui-btn ui-shadow" data-ajax="false">랜덤하게 보기</a>
+	        </div>
+            
+            <div class="item">
+                <ul data-role="listview" class="about_box_mld">
+                    <li><strong>감동받은</strong>, 뭉클한, 감격스런, 벅찬, 환희에 찬, 황홀한, 충만한</li>
+                    <li><strong>고마운</strong>, 감사한</li>
+                    <li><strong>즐거운</strong>, 유쾌한, 통쾌한, 흔쾌한, 기쁜, 행복한, 반가운</li>
+                    <li><strong>따뜻한</strong>, 감미로운, 포근한, 푸근한, 사랑하는, 정을 느끼는, 친근한, 훈훈한, 정겨운</li>
+                    <li><strong>뿌듯한</strong>, 산뜻한, 만족스런, 상쾌한, 흡족한, 개운한, 후련한, 든든한, 흐뭇한, 홀가분한</li>
+                    <li><strong>편안한</strong>, 느긋한, 담담한, 친밀한, 친근한, 긴장이 풀리는, 안심이 되는, 차분한, 가벼운</li>
+                    <li><strong>평화로운</strong>, 누그러지는, 고요한, 여유로운, 진정되는, 잠잠해진, 평온한</li>
+                    <li><strong>흥미로운</strong>, 매혹된, 재미있는, 끌리는</li>
+                    <li><strong>활기찬</strong>, 짜릿한, 신나는, 용기 나는, 기력이 넘치는, 기운이 나는, 당당한, 살아있는, 생기가 도는, 원기가 왕성한,
+                        자신감 있는, 힘이 솟는</li>
+                    <li><strong>흥분된</strong>, 두근거리는, 기대에 부푼, 들뜬, 희망에 찬</li>
+                </ul>
+            </div>
+            <div class="about_nbox_top1">
+    	        <h3 class="none">욕구가 충족되지 않을때</h3>
+                <a href="feeling_negative_auto.html" class="ui-btn ui-shadow" data-ajax="false">랜덤하게 보기</a>
+	        </div>
+
+            <div class="item right">
+                <ul data-role="listview" class="about_box_mld">
+                    <li><strong>걱정되는</strong>, 까마득한, 암담한, 염려되는, 근심하는, 신경 쓰이는, 뒤숭숭한</li>
+                    <li><strong>무서운</strong>, 섬뜩한, 오싹한, 주눅든, 겁나는, 두려운, 간담이 서늘해지는, 진땀 나는</li>
+                    <li><strong>불안한</strong>, 조바심 나는, 긴장한, 떨리는, 안절부절못한, 조마조마한, 초조한</li>
+                    <li><strong>불편한</strong>, 거북한, 겸연쩍은, 곤혹스러운, 떨떠름한, 언짢은, 괴로운, 난처한, 멋쩍은, 쑥스러운, 답답한, 갑갑한,
+                        서먹한, 숨막히는, 어색한, 찝찝한</li>
+                    <li><strong>슬픈</strong>, 가슴이 찢어지는, 구슬픈, 그리운, 눈물겨운, 목이 메는, 서글픈, 서러운, 쓰라린, 애끓는, 울적한, 참담한,
+                        처참한, 안타까운, 한스러운, 마음이 아픈, 비참한, 처연한 </li>
+                    <li><strong>서운한</strong>, 김빠진, 애석한, 냉담한, 섭섭한, 야속한, 낙담한</li>
+                    <li><strong>외로운</strong>, 고독한, 공허한, 적적한, 허전한, 허탈한, 막막한, 쓸쓸한, 허한</li>
+                    <li><strong>우울한</strong>, 무력한, 무기력한, 침울한, 꿀꿀한</li>
+                    <li><strong>피곤한</strong>, 고단한, 노곤한, 따분한, 맥 빠진, 맥 풀린, 지긋지긋한, 귀찮은, 무감각한, 지겨운, 지루한, 지친,
+                        절망스러운, 좌절한, 힘든, 무료한, 성가신, 심심한</li>
+                    <li><strong>혐오스런</strong>, 밥맛 떨어지는, 질린, 정떨어지는 </li>
+                    <li><strong>혼란스러운</strong>, 멍한, 창피한, 놀란, 민망한, 당혹스런, 무안한, 부끄러운</li>
+                    <li><strong>화가 나는</strong>, 끓어오르는, 속상한, 약 오르는, 분한, 울화가 치미는, 핏대서는, 격노한, 분개한, 억울한, 치밀어
+                        오르는</li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="about_nbox_bottom m20">
+        </div>
+    </div>
+</div>
+</body>
+</html>

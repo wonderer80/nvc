@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed" style="overflow:hidden;">
+        <div data-role="navbar">
+            <ul>
+            <li><a href="feeling.html"  data-theme="a" data-ajax="false">느낌</a></li>
+            <li><a href="needs.html" class="ui-btn-active"  data-theme="a" data-ajax="false">욕구</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+<h4 class="count" style="
+        text-align: center;
+    ">(1/30)</h4>
+    <h1 class="word" style="
+    text-align: center;
+    margin-top: 50%;
+">hello</h1>
+<h3 class="after" style="
+    text-align: center;
+">가(이) 중요하신가요?</h3>
+</div>
+</body>
+<script>
+var words = [
+" 질서∙조화 " ,
+" 꿈∙희망∙비전 " ,
+" 정직∙진실 " ,
+" 존재감∙현존  " ,
+" 기여∙나눔 " ,
+" 돌봄∙보호 " ,
+" 자기돌봄  " ,
+" 독립∙자립∙주관을 가짐  " ,
+" 자각∙깨달음  " ,
+" 자율성∙자유  " ,
+" 건강  " ,
+" 상호의존∙상호성  " ,
+" 공기∙물∙음식∙주거  " ,
+" 사랑∙관심∙우정  " ,
+" 영성∙영적교감 " ,
+" 성실∙온전함  " ,
+" 스킨쉽∙신체적 접촉  " ,
+" 놀이∙재미∙유머  " ,
+" 명료함∙투명성 " ,
+" 숙달∙전문성  " ,
+" 선택  " ,
+" 능력∙자신감  " ,
+" 연결∙유대 " ,
+" 효율성 " ,
+" 수용  " ,
+" 이해  " ,
+" 공유(인식∙가치관)  " ,
+" 신뢰  " ,
+" 안전∙안정(신체적∙정서적)  " ,
+" 발견∙자극 " ,
+" 예측가능성 " ,
+" 일치∙일관성  " ,
+" 감사∙인정 " ,
+" 배려  " ,
+" 자기표현∙개성 " ,
+" 존중  " ,
+" 여유∙편안함∙홀가분함 " ,
+" 평화  " ,
+" 공동체∙소속감 " ,
+" 평등  " ,
+" 자유로운 움직임∙운동 " ,
+" 도전  " ,
+" 휴식∙잠  " ,
+" 성적표현  " ,
+" 혼자만의 시간 " ,
+" 배움∙성장 " ,
+" 창조성∙영감  " ,
+" 축하∙인생예찬 " ,
+" 아름다움  " ,
+" 성취  " ,
+" 공감∙연민 " ,
+" 도움∙지지∙협력  " ,
+" 삶의 의미∙보람∙목표 " ,
+" 진정성 " ,
+" 애도  " ,
+" 따뜻함∙부드러움  " ,
+" 치유∙회복 " ,
+" 소통  " ,
+" 친밀함 " ];
+var index = 0;
+$(document).ready(function() 
+{
+  var body = document.body,
+    html = document.documentElement;
+
+  var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+  $('.word').css("margin-top", height/4+"px");
+  shuffle(words);
+  $('.word').text(words[index]); 
+  index++;
+  $('.count').text('(' + index + '/' + words.length + ')');   
+    
+});
+$('body').click(function ()
+{
+    $('.word').text(words[index]);   
+    if( index < words.length )
+    {
+        index++;
+    }
+    $('.count').text('(' + index + '/' + words.length + ')');   
+});
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+</script>
+</html>
