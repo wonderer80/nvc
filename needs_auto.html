@@ -4,9 +4,9 @@
 	<title>Page Title</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
@@ -93,29 +93,29 @@ var words = [
 " 소통  " ,
 " 친밀함 " ];
 var index = 0;
-$(document).ready(function() 
+$(document).ready(function()
 {
   var body = document.body,
     html = document.documentElement;
 
-  var height = Math.max( body.scrollHeight, body.offsetHeight, 
+  var height = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
   $('.word').css("margin-top", height/4+"px");
   shuffle(words);
-  $('.word').text(words[index]); 
+  $('.word').text(words[index]);
   index++;
-  $('.count').text('(' + index + '/' + words.length + ')');   
-    
+  $('.count').text('(' + index + '/' + words.length + ')');
+
 });
 $('body').click(function ()
 {
-    $('.word').text(words[index]);   
+    $('.word').text(words[index]);
     if( index < words.length )
     {
         index++;
     }
-    $('.count').text('(' + index + '/' + words.length + ')');   
+    $('.count').text('(' + index + '/' + words.length + ')');
 });
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;

@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Page Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
@@ -34,29 +34,29 @@
 <script>
 var words = ["까마득한", "암담한", "염려되는", "근심하는", "신경 쓰이는", "뒤숭숭한", "섬뜩한", "오싹한", "주눅든", "겁나는", "두려운", "간담이 서늘해지는", "진땀 나는", "조바심 나는", "긴장한", "떨리는", "안절부절못한", "조마조마한", "초조한", "거북한", "겸연쩍은", "곤혹스러운", "떨떠름한", "언짢은", "괴로운", "난처한", "멋쩍은", "쑥스러운", "답답한", "갑갑한","서먹한", "숨막히는", "어색한", "찝찝한", "가슴이 찢어지는", "구슬픈", "그리운", "눈물겨운", "목이 메는", "서글픈", "서러운", "쓰라린", "애끓는", "울적한", "참담한", "처참한", "안타까운", "한스러운", "마음이 아픈", "비참한", "처연한", "김빠진", "애석한", "냉담한", "섭섭한", "야속한", "낙담한", "고독한", "공허한", "적적한", "허전한", "허탈한", "막막한", "쓸쓸한", "허한", "무력한", "무기력한", "침울한", "꿀꿀한", "고단한", "노곤한", "따분한", "맥 빠진", "맥 풀린", "지긋지긋한", "귀찮은", "무감각한", "지겨운", "지루한", "지친", "절망스러운", "좌절한", "힘든", "무료한", "성가신", "심심한", "밥맛 떨어지는", "질린", "정떨어지는", "멍한", "창피한", "놀란", "민망한", "당혹스런", "무안한", "부끄러운", "끓어오르는", "속상한", "약 오르는", "분한", "울화가 치미는", "핏대서는", "격노한", "분개한", "억울한", "치밀어오르는"];
 var index = 0;
-$(document).ready(function() 
+$(document).ready(function()
 {
     var body = document.body,
     html = document.documentElement;
 
-  var height = Math.max( body.scrollHeight, body.offsetHeight, 
+  var height = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
   $('.word').css("margin-top", height/4+"px");
   shuffle(words);
-  $('.word').text(words[index]); 
+  $('.word').text(words[index]);
   index++;
-  $('.count').text('(' + index + '/' + words.length + ')');   
-    
+  $('.count').text('(' + index + '/' + words.length + ')');
+
 });
 $('body').click(function ()
 {
-    $('.word').text(words[index]);   
+    $('.word').text(words[index]);
     if( index < words.length )
     {
         index++;
     }
-    $('.count').text('(' + index + '/' + words.length + ')');   
+    $('.count').text('(' + index + '/' + words.length + ')');
 });
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
